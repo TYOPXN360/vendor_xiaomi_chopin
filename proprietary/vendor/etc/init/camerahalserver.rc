@@ -8,5 +8,13 @@ service camerahalserver /vendor/bin/hw/camerahalserver
 
 on boot
     chmod 0666 /sys/kernel/fpsgo/common/force_onoff
-    # init the  cpuset value for the camera background
-    write /dev/cpuset/camera-background/cpus 0-3
+    # The cpuset mask for the camera background group used to be written here
+    # as "write /dev/cpuset/camera-background/cpus 0-3". /dev/cpuset is not
+    # mounted on this device: cpuset is deliberately kept on the cgroup v2
+    # default hierarchy, since mounting it on v1 calls rebind_subsystems() and
+    # pulls it back out of v2. That write therefore always failed and no such
+    # group exists anywhere in the tree, so it has been removed rather than
+    # left behind as configuration that cannot work. Per-state CPU masks are
+    # applied by libprocessgroup instead - see the CpusetCpus attribute in
+    # /vendor/etc/task_profiles.json. camerahalserver picks its mask up through
+    # "task_profiles CameraServiceCapacity MaxPerformance" above.
