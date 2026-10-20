@@ -1,3 +1,10 @@
+# CCU is the camera co-processor the AE/statistics pipeline can hand work to.
+# CcuMgr::_checkCcuEnable() reads this once, when the manager is created, and
+# with it unset CcuMemMgr never builds its memory pool: allocateCcuBuffer()
+# reports totalSize(0) and the driver later walks into a NULL log buffer.
+on early-init
+    setprop vendor.debug.ccu_mgr_ccu.enable 1
+
 service camerahalserver /vendor/bin/hw/camerahalserver
     class main
     user cameraserver
