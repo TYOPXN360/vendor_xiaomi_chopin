@@ -15510,6 +15510,11 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libmtkcam_imgbuf",
     owner: "xiaomi",
+    // This blob is patched by extract-files.py (two "tbz w0, #0" branches
+    // around BufferAllocator::CheckIonSupport() become NOPs), so what ships
+    // is not byte-identical to what is checked in. Skip the link-time ELF
+    // dependency check rather than have it reject the patched copy.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -18082,3 +18087,4 @@ cc_prebuilt_binary {
     prefer: true,
     soc_specific: true,
 }
+

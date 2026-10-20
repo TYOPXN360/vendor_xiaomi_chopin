@@ -122,7 +122,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/novatek_ts_mp01.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_mp01.bin \
     vendor/xiaomi/chopin/proprietary/vendor/firmware/novatek_ts_mp02.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_mp02.bin \
     vendor/xiaomi/chopin/proprietary/vendor/thh/ta/8aaaf201246000007143fe4f7c823c80.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/8aaaf201246000007143fe4f7c823c80.ta
-
 PRODUCT_PACKAGES += \
     audio.primary.mt6893 \
     libaudio_param_parser-vnd \
