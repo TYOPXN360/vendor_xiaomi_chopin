@@ -1476,9 +1476,9 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libhardware",
                 "libc++",
-                # DT_NEEDED was repointed from libion.so to libio2.so by
-                # extract-files.py; libion_mtk stays because ion_alloc_camera()
-                # exists only there.
+                // DT_NEEDED was repointed from libion.so to libio2.so by
+                // extract-files.py; libion_mtk stays because ion_alloc_camera()
+                // exists only there.
                 "libio2",
                 "libdmabufheap",
                 "libmtkcam_modulehelper",
@@ -15531,9 +15531,9 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libnativewindow",
-                # DT_NEEDED was repointed from libion.so to libio2.so by
-                # extract-files.py; libion_mtk stays because ion_alloc_camera()
-                # exists only there.
+                // DT_NEEDED was repointed from libion.so to libio2.so by
+                // extract-files.py; libion_mtk stays because ion_alloc_camera()
+                // exists only there.
                 "libio2",
                 "libion_mtk",
                 "libaedv",
