@@ -1281,6 +1281,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "lib3a.af.assist.utils",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -1428,6 +1432,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "lib3a.ccudrv",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -9988,6 +9996,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libSuperSensor",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -12614,6 +12626,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libcamalgo.platform2",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -12778,6 +12794,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libcamdrv_imem",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -13051,6 +13071,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdip_imem",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -13601,6 +13625,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libimagebuffer_wrapper",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -13840,6 +13868,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libmialgo_ie_capture",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -13922,6 +13954,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libmialgo_video_enhance",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -15205,6 +15241,10 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libmtkcam_fdvt",
     owner: "xiaomi",
+    // DT_NEEDED is repointed from libion.so to libio2.so by
+    // extract-files.py; that library lives in the device tree, which
+    // this vendor namespace cannot read, so skip the link-time check.
+    check_elf_files: false,
     strip: {
         none: true,
     },
